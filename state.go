@@ -57,10 +57,3 @@ type Transition struct {
 func (service *Service) AddTransition(t Transition) {
 	service.Transitions[t] = true
 }
-
-
-
-
-
-
-
