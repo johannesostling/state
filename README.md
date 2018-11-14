@@ -1,0 +1,1 @@
+Stateless validation of state-transitions
