@@ -1,7 +1,5 @@
 package state
 
-import "time"
-
 type roles int
 
 const (
@@ -10,19 +8,42 @@ const (
 	admins
 )
 
+type Service struct {
+	States 				[]*State
+	Transitions 		map[Transition]*Transition
+}
+
+func NewService() *Service {
+	s := &Service{
+		
+	}	
+}
+
+func (s *Service) IsValid(t *Transition) (string,error) {
+
+}
+
 type State struct {
-	Id    int
 	Name  string
-	Desc  string
-	Added time.Time
+}
+
+func (s *Service) AddState() {
+
 }
 
 type Transition struct {
-	Id        int
-	Name      string
-	Desc      string
-	CurrState int
-	ReqState  int
-	User      roles
-	Added     time.Time
+	CurrState	*State
+	ReqState	*State
+	User 		roles
 }
+
+func (s *Service) AddTransition() {
+
+}
+
+
+
+
+
+
+
